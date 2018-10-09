@@ -1,3 +1,4 @@
+#<------------------------------------------------------------ INTRODUCTION --------------------------------------------------------->
 # Welcome to your first programming challenge!
 # Below, we have given you four puzzles to solve, in increasing difficulty. 
 # Do as many as you can (we believe in you)! 
@@ -8,6 +9,7 @@
 # 1) Google whatever error message you're getting
 # 2) Try and figure out better keywords to google it with
 # 3) Reach out to us (contact info below)
+# 4) Check the SOLUTIONS in hw1_solutions.py
 
 # If you want feedback on the code you have written, you can send it to us by Sunday at 3pm the latest.
 # If you send it to us any time before then we will look it over and get back to you as soon as possible.
@@ -23,11 +25,13 @@
 # You can download the latest version here: 
 # https://www.python.org/downloads/
 #
+# CONTACT INFO:
 # Should you have any problems doing so, please reach out to us at rutgerscognitivescienceclub@gmail.com, or on Slack (@Yoni, or @Ranga)
 
 # <--------------------------------------------------------------------------------------------------------------------------------->
 
 
+#................................................... PROBLEM 1 ....................................................................#
 # You run a software company that builds high scale pyramids for wealthy pharoahs.
 # In a few weeks you will be presenting to a new client, but the client doesn't know what size pyramid he wants.
 # You need to win this contract, so you really want to impress the client. Consequently, you have decided to build a demo that will
@@ -43,8 +47,11 @@
 # If you are lost and don't know where to start, try googling "loops in python"
 
 def problem1(N):
-    return None
+    return None 
 
+
+
+#................................................... PROBLEM 2 ....................................................................#
 
 # Your friends don't believe you know how to code.
 # Prove them wrong by solving the ultimate coding challenge: building a calculator.
@@ -57,8 +64,12 @@ def problem1(N):
 # > Second Number? 6
 # > Operation ((a) Addition, (s) Subtraction, (m) Multiplication, or (d) Division)? m
 # > Result: 24
+
 def problem2():
     return None
+
+
+#................................................... PROBLEM 3 ....................................................................#
 
 # Kevin from sales has a penchant for messing things up. Every week sales improve he's supposed to send you a report on how they improved. 
 # The report always has two variables: A & B. The variable A is supposed to be the lower sales number, and B is supposed to be the higher one.
@@ -78,33 +89,46 @@ def problem3(A, B):
     return A, B
 
 
-# Implement this encription algorithm
+#................................................... PROBLEM 4 .....................................................................#
+
+# The government is watching your every move. Evade the grubby clutches of their nefarious goons by garbling all your messages with 
+# the external world. In order to do so you'll need to encrypt your outgoing messages. You're not sure how to do this. Luckily, someone 
+# has already thought up an encryption scheme long ago:
+
+# Implement the Caesar-Cipher encription algorithm
 # https://learncryptography.com/classical-encryption/caesar-cipher
 # This function takes in the plain text which we must do a left shift on by the key's value
 # NOTE: You do not need to maintain case on the output (I recomend keeping it as either lower or upper case!)
+
 def problem4(plain_text, key):
     return ""
 
 
+################################################# YOU CAN IGNORE THIS ##############################################################
 def run():
     while True:
         print("Which problem do you want to run? \n(1) * Pyramid\n(2) Basic Calculator\n(3) Variable Ordering\n(4) Caesar Cipher Encryption\n(q) QUIT\n")
         choice = input("Enter your choice: ")
-
+    
+        #Check input:
         if '1' in choice:
             n = int(input("How many stories high would you like your pyramid? "))
             problem1(n)
+
         elif '2' in choice:
             problem2()
+
         elif '3' in choice:
             a = int(input("Input a: "))
             b = int(input("Input b: "))
             new_a, new_b = problem3(a, b)
             print("A and B have been Correctly Ordered: {new_a}, {new_b}".format(new_a=new_a, new_b=new_b))
+
         elif '4' in choice:
             pText = input("What do you want to encode with the Caesar Cipher? ")
             key = int(input("What key do you want to shift by? "))
             print(problem4(pText, key).upper())
+
         else:
             break
 

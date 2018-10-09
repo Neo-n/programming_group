@@ -1,3 +1,4 @@
+#.......................................................INTRODUCTION................................................................#
 # Welcome to your first programming challenge!
 # Below, we have given you four puzzles to solve, in increasing difficulty. 
 # Do as many as you can (we believe in you)! 
@@ -24,8 +25,10 @@
 # https://www.python.org/downloads/
 #
 # Should you have any problems doing so, please reach out to us at rutgerscognitivescienceclub@gmail.com, or on Slack (@Yoni, or @Ranga)
+#.......................................................................................................................................#
 
 
+#PROBLEM 1:
 
 # You run a software company that builds high scale pyramids for wealthy pharoahs.
 # In a few weeks you will be presenting to a new client, but the client doesn't know what size pyramid he wants.
@@ -42,12 +45,15 @@
 # If you are lost and don't know where to start, try googling "loops in python"
 
 def problem1(N):
-    for num in range(1, N+1):
-        for _ in range(num):
+    for level in range(1, N+1):
+        for stars in range(level):
             print('*', end=' ')
         print('\n')
     return None
 
+#.......................................................................................................................................#
+
+#PROBLEM 2:
 
 # Your friends don't believe you know how to code.
 # Prove them wrong by solving the ultimate coding challenge: building a calculator.
@@ -77,6 +83,8 @@ def problem2():
     
     return None
 
+#.......................................................................................................................................#
+
 # Kevin from sales has a penchant for messing things up. Every week sales improve he's supposed to send you a report on how they improved. 
 # The report always has two variables: A & B. The variable A is supposed to be the lower sales number, and B is supposed to be the higher one.
 # He's gotten them mixed up at least four times now, and last time it nearly cost you your job. 
@@ -97,10 +105,16 @@ def problem3(A, B):
     return A, B
 
 
-# Implement this encription algorithm
+#.......................................................................................................................................#
+# The government is watching your every move. Evade the grubby clutches of their nefarious goons by garbling all your messages with 
+# the external world. In order to do so you'll need to encrypt your outgoing messages. You're not sure how to do this. Luckily, someone 
+# has already thought up an encryption scheme long ago:
+
+# Implement the Caesar-Cipher encription algorithm
 # https://learncryptography.com/classical-encryption/caesar-cipher
-# This function takes in the plain text which we must do a left shift on by the key's value
+# This function takes in the plain text on which we must do a left shift on by the key's value
 # NOTE: You do not need to maintain case on the output (I recomend keeping it as either lower or upper case!)
+
 def problem4(plain_text, key):
     alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
     cypher_text = []
@@ -110,8 +124,9 @@ def problem4(plain_text, key):
         if char == ' ':
             cypher_text.append(' ')
             continue
-        ind = alphabet.index(char)
-        cypher_text.append(alphabet[(ind-key)%26])
+        index = alphabet.index(char)
+        cypher_text.append(alphabet[(index-key)%26]) #The percent sign performs an operation called a "modulo" which will give you a remainder: ie; 10 % 3 = 1, since 10 / 3 = 3 remainder 1. 
+                                                     #If the first number is lower than the second number, the answer is just the first number: ie; 3 % 10 = 3
 
     return ("".join(cypher_text)).upper()
 

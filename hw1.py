@@ -98,7 +98,7 @@ def run():
             a = int(input("Input a: "))
             b = int(input("Input b: "))
             new_a, new_b = problem3(a, b)
-            print("a and b have been swapped: {new_a}, {new_b}".format(new_a=new_a, new_b=new_b))
+            print("A and B have been Correctly Ordered: {new_a}, {new_b}".format(new_a=new_a, new_b=new_b))
         elif '4' in choice:
             pText = input("What do you want to encode with the Caesar Cipher? ")
             print(problem4(pText))

@@ -1,14 +1,56 @@
-# Print out a pyramid of stars N in this pattern
+# Welcome to your first programming challenge!
+# Below, we have given you four puzzles to solve, in increasing difficulty. 
+# Do as many as you can (we believe in you)! 
+
+# Should you run into any scary bugs or dead ends, we have compiled a small programmers survival guide for you. 
+# It goes as follows:
+
+# 1) Google whatever error message you're getting
+# 2) Try and figure out better keywords to google it with
+# 3) Reach out to us (contact info below)
+
+# If you want feedback on the code you have written, you can send it to us by Sunday at 3pm the latest.
+# If you send it to us any time before then we will look it over and get back to you as soon as possible.
+
+# Good luck!
+
+# PLEASE NOTE:
+# If you are using Python Version 2.7.5 or lower, you won't be able to run this code.
+# While you are able to make some changes to the code in order to fix these inconsistencies, 
+# we highly recommend you download Python version 3.x.x instead (whatever the latest version of python is).
+# Python 2.7 is being phased out within the next few years, so it is worthwhile getting used to the newest version now.
+#
+# You can download the latest version here: 
+# https://www.python.org/downloads/
+#
+# Should you have any problems doing so, please reach out to us at rutgerscognitivescienceclub@gmail.com, or on Slack (@Yoni, or @Ranga)
+
+
+
+# You run a software company that builds high scale pyramids for wealthy pharoahs.
+# In a few weeks you will be presenting to a new client, but the client doesn't know what size pyramid he wants.
+# You need to win this contract, so you really want to impress the client. Consequently, you have decided to build a demo that will
+# let the Pharoah enter how many stories high he wants his pyramid. 
+#
+# The program you write will print out a pyramid of stars N stories high.
+# ie; N = 4:
 # *
 # * *
 # * * *
 # * * * *
-# Change the input paramater for N and print N by N *s
+# 
+# If you are lost and don't know where to start, try googling "loops in python"
+
 def problem1(N):
     return None
 
 
-# Function to take in user input and return (a) Addition, (s) Subtraction, (m) Multiplication, or (d) Division of 2 numbers
+# Your friends don't believe you know how to code.
+# Prove them wrong by solving the ultimate coding challenge: building a calculator.
+# No one will deny how cool you have become should you succeed in this task.
+# For now it will be a simple calculator, just to show them how terribly mistaken they were to question your programming integrity.
+#
+# Your calculator will take in user input and return (a) Addition, (s) Subtraction, (m) Multiplication, or (d) Division of 2 numbers
 # IE:
 # > First Number? 4
 # > Second Number? 6
@@ -17,9 +59,22 @@ def problem1(N):
 def problem2():
     return None
 
-# Swap the variables given to you so the value of b is in a and the value of a is in b
-def problem3(a, b):
-    return a, b
+# Kevin from sales has a penchant for messing things up. Every week sales improve he's supposed to send you a report on how they improved. 
+# The report always has two variables: A & B. The variable A is supposed to be the lower sales number, and B is supposed to be the higher one.
+# He's gotten them mixed up at least four times now, and last time it nearly cost you your job. 
+# 
+# With your newfound knowledge of c o m p u t e r   s c i e n c e, write a program to do the following:
+#
+# 1) Check if A is greater than B
+# 2) If it is, swap the two numbers around, because your idiot coworker messed up again.
+# 3) If A is equal to or less than B, you don't need to do anything
+# 4) Return the (maybe new) values of A and B 
+
+# ie; A = 5, B = 3,
+# output: A = 3, B = 5
+
+def problem3(A, B):
+    return A, B
 
 
 # Implement this encription algorithm
@@ -30,18 +85,18 @@ def problem4():
 
 def run():
     while True:
-        print("Which problem do you want to run? \n(1) problem1\n(2) problem2\n(3) problem3\n(4) problem4\n(q) QUIT")
-        choice = input()
+        print("Which problem do you want to run? \n(1) problem1\n(2) problem2\n(3) problem3\n(4) problem4\n(q) QUIT\n")
+        choice = input("Enter your choice: ")
 
         if '1' in choice:
-            n = int(input("What do you want for N? "))
-            print(problem1(n))
+            n = int(input("How many stories high would you like your pyramid? "))
+            print(problem1(n) + '\n')
         elif '2' in choice:
             print(problem2())
         elif '3' in choice:
-            a = input("Input a: ")
-            b = input("Input b: ")
-            print(problem3(a, b))
+            a = (int)input("Input a: ")
+            b = (int)input("Input b: ")
+            print("a and b have been swapped: " + problem3(a, b))
         elif '4' in choice:
             print(problem4())
         else:

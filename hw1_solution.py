@@ -99,7 +99,7 @@ def problem3(A, B):
 
 # Implement this encription algorithm
 # https://learncryptography.com/classical-encryption/caesar-cipher
-# This function takes in the plain text which we must do a left shift on with the key
+# This function takes in the plain text which we must do a left shift on by the key's value
 # NOTE: You do not need to maintain case on the output (I recomend keeping it as either lower or upper case!)
 def problem4(plain_text, key):
     alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']

@@ -61,13 +61,27 @@ def problem1(N):
 # > Operation ((a) Addition, (s) Subtraction, (m) Multiplication, or (d) Division)? m
 # > Result: 24
 def problem2():
+    num1 = int(input("First Number? "))
+    num2 = int(input("Second Number? "))
+    op = input("(a) Addition, (s) Subtraction, (m) Multiplication, or (d) Division? ")
+    print("Result:", end=" ")
+    
+    if op is 'a':
+        print(num1+num2)
+    elif op is 's':
+        print(num1-num2)
+    elif op is 'm':
+        print(num1*num2)
+    elif op is 'd':
+        print(num1/num2)
+    
     return None
 
 # Kevin from sales has a penchant for messing things up. Every week sales improve he's supposed to send you a report on how they improved. 
 # The report always has two variables: A & B. The variable A is supposed to be the lower sales number, and B is supposed to be the higher one.
 # He's gotten them mixed up at least four times now, and last time it nearly cost you your job. 
 # 
-# With your newfound knowledge of c o m p u t e r   s c i e n c e, write a program to do the following:
+# With your newfound knowledge of C O M P U T E R   S C I E N C E, write a program to do the following:
 #
 # 1) Check if A is greater than B
 # 2) If it is, swap the two numbers around, because your idiot coworker messed up again.
@@ -78,7 +92,7 @@ def problem2():
 # output: A = 3, B = 5
 
 def problem3(A, B):
-    return A, B
+    return B, A
 
 
 # Implement this encription algorithm
@@ -94,13 +108,14 @@ def run():
 
         if '1' in choice:
             n = int(input("How many stories high would you like your pyramid? "))
-            print(problem1(n) + '\n')
+            problem1(n)
         elif '2' in choice:
-            print(problem2())
+            problem2()
         elif '3' in choice:
             a = int(input("Input a: "))
             b = int(input("Input b: "))
-            print("a and b have been swapped: " + problem3(a, b))
+            new_a, new_b = problem3(a, b)
+            print("a and b have been swapped: {new_a}, {new_b}".format(new_a=new_a, new_b=new_b))
         elif '4' in choice:
             print(problem4())
         else:

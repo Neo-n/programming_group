@@ -91,13 +91,14 @@ def run():
 
         if '1' in choice:
             n = int(input("How many stories high would you like your pyramid? "))
-            print(problem1(n) + '\n')
+            problem1(n)
         elif '2' in choice:
-            print(problem2())
+            problem2()
         elif '3' in choice:
             a = int(input("Input a: "))
             b = int(input("Input b: "))
-            print("a and b have been swapped: " + problem3(a, b))
+            new_a, new_b = problem3(a, b)
+            print("a and b have been swapped: {new_a}, {new_b}".format(new_a=new_a, new_b=new_b))
         elif '4' in choice:
             print(problem4())
         else:

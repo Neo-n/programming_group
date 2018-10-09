@@ -25,7 +25,6 @@
 #
 # Should you have any problems doing so, please reach out to us at rutgerscognitivescienceclub@gmail.com, or on Slack (@Yoni, or @Ranga)
 
-# <--------------------------------------------------------------------------------------------------------------------------------->
 
 
 # You run a software company that builds high scale pyramids for wealthy pharoahs.
@@ -43,6 +42,10 @@
 # If you are lost and don't know where to start, try googling "loops in python"
 
 def problem1(N):
+    for num in range(1, N+1):
+        for _ in range(num):
+            print('*', end=' ')
+        print('\n')
     return None
 
 

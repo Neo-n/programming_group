@@ -86,7 +86,7 @@ def problem4(plain_text):
 
 def run():
     while True:
-        print("Which problem do you want to run? \n(1) problem1\n(2) problem2\n(3) problem3\n(4) problem4\n(q) QUIT\n")
+        print("Which problem do you want to run? \n(1) * Pyramid\n(2) Basic Calculator\n(3) Variable Ordering\n(4) Caesar Cipher Encryption\n(q) QUIT\n")
         choice = input("Enter your choice: ")
 
         if '1' in choice:

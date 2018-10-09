@@ -99,8 +99,21 @@ def problem3(A, B):
 
 # Implement this encription algorithm
 # https://learncryptography.com/classical-encryption/caesar-cipher
-def problem4(plain_text):
-    return None
+# This function takes in the plain text which we must do a left shift on with the key
+# NOTE: You do not need to maintain case on the output (I recomend keeping it as either lower or upper case!)
+def problem4(plain_text, key):
+    alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    cypher_text = []
+    plain_text = plain_text.lower()
+    
+    for char in plain_text:
+        if char == ' ':
+            cypher_text.append(' ')
+            continue
+        ind = alphabet.index(char)
+        cypher_text.append(alphabet[(ind-key)%26])
+
+    return ("".join(cypher_text)).upper()
 
 
 def run():
@@ -120,7 +133,8 @@ def run():
             print("A and B have been Correctly Ordered: {new_a}, {new_b}".format(new_a=new_a, new_b=new_b))
         elif '4' in choice:
             pText = input("What do you want to encode with the Caesar Cipher? ")
-            print(problem4(pText))
+            key = int(input("What key do you want to shift by? "))
+            print(problem4(pText, key).upper())
         else:
             break
 
